@@ -31,7 +31,8 @@ class CharacterPage extends StatelessWidget {
                     appBar: AppBar(),
                     body: Center(
                       child: PhotoHero(
-                        image: _image,
+                        image:
+                            Image.network(character.img, fit: BoxFit.contain),
                         title: character.name,
                         width: MediaQuery.of(context).size.width,
                         onTap: () {
