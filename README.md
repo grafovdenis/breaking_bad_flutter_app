@@ -1,7 +1,7 @@
 # breaking_bad_flutter_app
 
 Flutter project for Mobile and Web.  
-It uses BLoC architecture and open-source [Breaking Bad API](https://breakingbadapi.com/).
+It uses [BLoC architecture](https://bloclibrary.dev) and open-source [Breaking Bad API](https://breakingbadapi.com/).
 
 ## Getting Started
 
