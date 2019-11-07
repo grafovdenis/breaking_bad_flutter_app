@@ -1,7 +1,20 @@
 name: Flutter web CI/CD
-on: [push]
+on: 
+  push:
+    paths: 'lib/**'
 jobs:
-  build:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: subosito/flutter-action@v1
+      with:
+        channel: 'stable'
+    - run: flutter pub get
+    - run: flutter test
+  deploy:
+    name: deploy
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -10,7 +23,6 @@ jobs:
         channel: 'dev'
     - run: flutter config --enable-web
     - run: flutter pub get
-    - run: flutter test
     - run: flutter build web
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
