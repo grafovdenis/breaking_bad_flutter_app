@@ -14,6 +14,7 @@ class _EpisodesPageState extends State<EpisodesPage> {
   @override
   Widget build(BuildContext context) {
     final episodesBloc = BlocProvider.of<EpisodesBloc>(context);
+    
     return BlocBuilder<EpisodesBloc, PostState>(
       bloc: episodesBloc,
       builder: (context, state) {

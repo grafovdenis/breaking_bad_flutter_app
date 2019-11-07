@@ -14,6 +14,7 @@ class _DeathsPageState extends State<DeathsPage> {
   @override
   Widget build(BuildContext context) {
     final deathsBloc = BlocProvider.of<DeathsBloc>(context);
+    
     return BlocBuilder<DeathsBloc, PostState>(
       bloc: deathsBloc,
       builder: (context, state) {

@@ -1,4 +1,3 @@
-import 'package:breaking_bad_flutter_app/bloc/characters_bloc.dart';
 import 'package:breaking_bad_flutter_app/bloc/post_state.dart';
 import 'package:breaking_bad_flutter_app/bloc/quotes_bloc.dart';
 import 'package:flutter/material.dart';
