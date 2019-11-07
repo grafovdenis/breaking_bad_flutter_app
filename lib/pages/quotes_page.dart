@@ -1,7 +1,7 @@
-import 'package:breaking_bad_flutter_app/bloc/post_state.dart';
-import 'package:breaking_bad_flutter_app/bloc/quotes_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:breaking_bad_flutter_app/bloc/post_state.dart';
+import 'package:breaking_bad_flutter_app/bloc/quotes_bloc.dart';
 
 class QuotesPage extends StatefulWidget {
   QuotesPage({Key key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:intl/intl.dart';
+import 'package:flutter/material.dart';
 import 'package:breaking_bad_flutter_app/data/character.dart';
 import 'package:breaking_bad_flutter_app/widgets/photo_hero.dart';
-import 'package:flutter/material.dart';
 
 class CharacterPage extends StatelessWidget {
   final Character character;
