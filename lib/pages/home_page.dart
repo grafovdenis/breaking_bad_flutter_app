@@ -5,7 +5,6 @@ import 'package:breaking_bad_flutter_app/bloc/post_event.dart';
 import 'package:breaking_bad_flutter_app/bloc/quotes_bloc.dart';
 import 'package:breaking_bad_flutter_app/pages/deaths_page.dart';
 import 'package:breaking_bad_flutter_app/pages/quotes_page.dart';
-import 'package:breaking_bad_flutter_app/pages/tab_bar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
