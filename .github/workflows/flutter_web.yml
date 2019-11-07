@@ -42,7 +42,7 @@ jobs:
     - run: flutter pub get
     - run: flutter build apk
     - name: upload artifects
-        uses: actions/upload-artifact@master
-        with:
-          name: android-app
-          path: build/app/outputs
+      uses: actions/upload-artifact@master
+      with:
+        name: android-app
+        path: build/app/outputs
