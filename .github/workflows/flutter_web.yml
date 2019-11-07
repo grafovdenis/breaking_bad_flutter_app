@@ -3,8 +3,8 @@ on:
   push:
     paths: 'lib/**'
 jobs:
-  test:
-    name: test
+  tests:
+    name: tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -14,7 +14,7 @@ jobs:
     - run: flutter pub get
     - run: flutter test
   deploy:
-    name: deploy
+    name: GitHub Pages deploy
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -31,3 +31,18 @@ jobs:
         BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: build/web # The folder the action should deploy.
+  android-deploy:
+    name: Android deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: subosito/flutter-action@v1
+      with:
+        channel: 'stable'
+    - run: flutter pub get
+    - run: flutter build apk
+    - uses: skx/github-action-publish-binaries@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: 'build/app/outputs/apk/release/app-release.apk'
