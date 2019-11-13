@@ -18,6 +18,7 @@ class _DeathsState extends State<Deaths>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocProvider(
       builder: (context) => DeathsBloc()..add(Fetch()),
       child: DeathsPage(),

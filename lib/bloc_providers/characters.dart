@@ -18,6 +18,7 @@ class _CharactersState extends State<Characters>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocProvider(
       builder: (context) => CharactersBloc()..add(Fetch()),
       child: CharactersPage(),

@@ -18,6 +18,7 @@ class _EpisodesState extends State<Episodes>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocProvider(
       builder: (context) => EpisodesBloc()..add(Fetch()),
       child: EpisodesPage(),
