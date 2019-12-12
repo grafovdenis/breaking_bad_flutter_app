@@ -13,6 +13,7 @@ class QuotesPage extends StatefulWidget {
 class _QuotesPageState extends State<QuotesPage> {
   @override
   Widget build(BuildContext context) {
+    // ignore: close_sinks
     final quotesBloc = BlocProvider.of<QuotesBloc>(context);
 
     return BlocBuilder<QuotesBloc, PostState>(
@@ -48,6 +49,7 @@ class _QuotesPageState extends State<QuotesPage> {
             itemCount: state.posts.length,
           );
         }
+        return Container();
       },
     );
   }

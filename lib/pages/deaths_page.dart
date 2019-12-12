@@ -13,8 +13,9 @@ class DeathsPage extends StatefulWidget {
 class _DeathsPageState extends State<DeathsPage> {
   @override
   Widget build(BuildContext context) {
+    // ignore: close_sinks
     final deathsBloc = BlocProvider.of<DeathsBloc>(context);
-    
+
     return BlocBuilder<DeathsBloc, PostState>(
       bloc: deathsBloc,
       builder: (context, state) {
@@ -46,6 +47,7 @@ class _DeathsPageState extends State<DeathsPage> {
             itemCount: state.posts.length,
           );
         }
+        return Container();
       },
     );
   }

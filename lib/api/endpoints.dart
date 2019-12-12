@@ -26,6 +26,7 @@ Future<List<Character>> fetchCharacters() async {
             category: rawPost['category']);
       } catch (e) {
         print("$e, $rawPost");
+        return Character();
       }
     }).toList();
   } else {
@@ -51,6 +52,7 @@ Future<List<Death>> fetchDeaths() async {
             numberOfDeaths: rawPost['num_number_of_deaths']);
       } catch (e) {
         print("$e, $rawPost");
+        return null;
       }
     }).toList();
   } else {
@@ -75,6 +77,7 @@ Future<List<Episode>> fetchEpisodes() async {
             series: rawPost['series']);
       } catch (e) {
         print("$e, $rawPost");
+        return Character();
       }
     }).toList();
   } else {
@@ -84,9 +87,9 @@ Future<List<Episode>> fetchEpisodes() async {
 
 Future<List<Quote>> fetchQuotes() async {
   print("Fetching quotes");
-  final resposnse = await http.get("https://breakingbadapi.com/api/quotes");
-  if (resposnse.statusCode == 200) {
-    final date = json.decode(resposnse.body) as List;
+  final response = await http.get("https://breakingbadapi.com/api/quotes");
+  if (response.statusCode == 200) {
+    final date = json.decode(response.body) as List;
     return date.map((rawPost) {
       try {
         return Quote(
@@ -96,9 +99,10 @@ Future<List<Quote>> fetchQuotes() async {
             series: rawPost['series']);
       } catch (e) {
         print("$e, $rawPost");
+        return Character();
       }
     }).toList();
   } else {
-    throw Exception("Error fetching quotes: ${resposnse.body}");
+    throw Exception("Error fetching quotes: ${response.body}");
   }
 }

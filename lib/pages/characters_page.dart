@@ -14,6 +14,7 @@ class CharactersPage extends StatefulWidget {
 class _CharactersPageState extends State<CharactersPage> {
   @override
   Widget build(BuildContext context) {
+    // ignore: close_sinks
     final charactersBloc = BlocProvider.of<CharactersBloc>(context);
 
     return BlocBuilder<CharactersBloc, PostState>(
@@ -42,6 +43,7 @@ class _CharactersPageState extends State<CharactersPage> {
             itemCount: state.posts.length,
           );
         }
+        return Container();
       },
     );
   }

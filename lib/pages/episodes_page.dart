@@ -13,6 +13,7 @@ class EpisodesPage extends StatefulWidget {
 class _EpisodesPageState extends State<EpisodesPage> {
   @override
   Widget build(BuildContext context) {
+    // ignore: close_sinks
     final episodesBloc = BlocProvider.of<EpisodesBloc>(context);
     
     return BlocBuilder<EpisodesBloc, PostState>(
@@ -45,6 +46,7 @@ class _EpisodesPageState extends State<EpisodesPage> {
             itemCount: state.posts.length,
           );
         }
+        return Container();
       },
     );
   }
