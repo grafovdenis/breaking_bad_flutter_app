@@ -20,7 +20,7 @@ class _EpisodesState extends State<Episodes>
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
-      builder: (context) => EpisodesBloc()..add(Fetch()),
+      create: (context) => EpisodesBloc()..add(Fetch()),
       child: EpisodesPage(),
     );
   }

@@ -52,7 +52,7 @@ Future<List<Death>> fetchDeaths() async {
             numberOfDeaths: rawPost['num_number_of_deaths']);
       } catch (e) {
         print("$e, $rawPost");
-        return null;
+        return Death();
       }
     }).toList();
   } else {
@@ -77,7 +77,7 @@ Future<List<Episode>> fetchEpisodes() async {
             series: rawPost['series']);
       } catch (e) {
         print("$e, $rawPost");
-        return Character();
+        return Episode();
       }
     }).toList();
   } else {
@@ -99,7 +99,7 @@ Future<List<Quote>> fetchQuotes() async {
             series: rawPost['series']);
       } catch (e) {
         print("$e, $rawPost");
-        return Character();
+        return Quote();
       }
     }).toList();
   } else {

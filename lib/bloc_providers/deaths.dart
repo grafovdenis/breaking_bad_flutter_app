@@ -20,7 +20,7 @@ class _DeathsState extends State<Deaths>
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
-      builder: (context) => DeathsBloc()..add(Fetch()),
+      create: (context) => DeathsBloc()..add(Fetch()),
       child: DeathsPage(),
     );
   }

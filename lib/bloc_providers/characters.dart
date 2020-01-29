@@ -20,7 +20,7 @@ class _CharactersState extends State<Characters>
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
-      builder: (context) => CharactersBloc()..add(Fetch()),
+      create: (context) => CharactersBloc()..add(Fetch()),
       child: CharactersPage(),
     );
   }

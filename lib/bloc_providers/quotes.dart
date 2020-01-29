@@ -20,7 +20,7 @@ class _QuotesState extends State<Quotes>
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
-      builder: (context) => QuotesBloc()..add(Fetch()),
+      create: (context) => QuotesBloc()..add(Fetch()),
       child: QuotesPage(),
     );
   }
